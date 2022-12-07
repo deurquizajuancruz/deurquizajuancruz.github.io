@@ -1,0 +1,93 @@
+body{
+    background-color: rgba(48,53,66,255);
+    font-family:Helvetica;
+    font-size: 110%;
+}
+
+.titulo {
+    color: white;
+    text-decoration: underline;
+}
+.calculadora {
+    background-color: rgb(69, 69, 69);
+    margin: 0 auto;
+    width: 330px;
+    height: 485px;
+    border-radius: 10px;
+    border-style:solid;
+    border-color: rgb(45, 44, 44);
+}
+
+h1 {
+    text-align: center;
+}
+
+/*BOTONES CALCULADORA*/
+.botones {
+    display: grid;
+    grid-template-columns: repeat(4,75px);
+    grid-template-rows: repeat(5,75px);
+    justify-content: center;
+    margin: 10px;
+}
+
+button {
+    border-radius: 40px;
+    font-size: larger;
+    margin: 3px;
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
+.numero {
+    color: white;
+    background-color: grey;
+    border-style:none;
+}
+
+.funciones {
+    color: white;
+    background-color: orange;
+    border-style: none;
+}
+.borrar {
+    border-style: none;
+}
+
+.col2 {
+    grid-column: span 2;
+}
+
+/*VISOR*/
+.mostrar {
+    text-align: right;
+    font-size: 150%;
+    background-color: rgb(45, 44, 44);
+    width: 325px;
+    margin: 0 auto;
+    /*border-radius: 10px;*/
+}
+
+.mostrar p {
+    padding-right: 5px;
+    margin-bottom: 0px;
+    color: white;
+}
+
+.github {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen {
+    width: 100px;
+    height:100px;
+}
+
+.imagen:hover {
+    transform: scale(1.35);
+    
+}
