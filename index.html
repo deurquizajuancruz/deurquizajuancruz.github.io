@@ -1,44 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi página personal</title>
+    <title>Portafolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
-
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul class="menu">
-                <li>
-                    <a href="/index.html" class="active"> Home </a>
-                </li>
-                <li>
-                    <a href="./pages/contacto.html"> Contacto</a>
-                </li>
-                <li>
-                    <a href="./pages/experiencia.html"> Experiencia </a>
-                </li>
-                <li>
-                    <a href="/pages/formacion.html"> Formación </a>
-                </li>
-                <li>
-                    <a href="/integrador/index.html"> Trabajo Integrador Codo a Codo</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <div class="exterior">
+        <div class="informacion">
+            <img src="./assets/istockphoto-1270987867-612x612.jpg" alt="miImagen" class="foto">
+            <div class="logos">
+                <ul>
+                    <li>
+                        <a href="https://github.com/deurquizajuancruz">
+                            <img src="./assets/GHLogo.png" alt="GitHub" class="lg">
+                        </a>
+                    </li>
+                    <li>
+                        <img src="./assets/Gmail_Logo_512px.png" alt="Gmail" class="gmail" onclick="copiar()">
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-    <main>
-        <section class="contenido">
-            <h1> Bienvenido </h1>
-            <p> Soy un estudiante! </p>
-        </section>
-    </main>
+        <div class="presentacion">
+            <h1 class="nombre">Juan Cruz de Urquiza</h1>
+            <h3>Soy estudiante de Licenciatura en Sistemas en la Universidad Nacional de La Plata. </h3>
+        </div>
+
+        <div class="proyectos">
+            <a href="./calculadora/index.html">
+                <img src="./assets/Calculadora - Brave 7_12_2022 22_36_07.png" alt="calculadora" class="imgCal">
+                <div class="txtCal"> Calculadora</div>
+            </a>
+            <a href="./integrador/index.html">
+                <img src="./assets/Conf Bs As - Brave 7_12_2022 22_37_45.png" alt="codoACodo" class="imgCac">
+                <div class="txtCac"> Proyecto integrador Codo a Codo </div>
+            </a>
+        </div>
+
+    </div>
+
+    <script>
+        function copiar() {
+            navigator.clipboard.writeText("deurquizajuancruz@gmail.com");
+        }
+    </script>
 </body>
 
 </html>
