@@ -1,36 +1,199 @@
 body {
-    background-color: white;
+    background: rgb(48, 30, 177);
+    background: linear-gradient(180deg, rgba(48, 30, 177, 1) 0%, rgba(94, 100, 154, 1) 100%);
+    font-family: 'Raleway', sans-serif !important;
 }
-/*menu*/
-.menu{
-    list-style-type: none;
+
+.exterior {
+    display: grid;
+    grid-template-areas:
+        "informacion presentacion"
+        "informacion proyectos";
+    min-height: 100vh;
+    margin-top: 3%;
+}
+
+.informacion {
+    grid-area: informacion;
+}
+
+.presentacion {
+    grid-area: presentacion;
+}
+
+.proyectos {
+    grid-area: proyectos;
+}
+
+/*INFORMACION*/
+.informacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    bottom: 10%;
+}
+
+.foto {
+    border-radius: 50%;
+    height: 30rem;
+    width: 30rem;
+}
+
+.logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
     margin: 0;
-    padding: 0px;
-    /*background-color: lightgreen;*/
-    overflow: hidden;
+    list-style: none;
 }
 
-.menu li {
-    float: left;
+.logos li:hover {
+    transform: translateY(-3px);
+    cursor: pointer;
 }
 
-li a {
-    border: 1px solid black;
-    padding: 15px;
-    color: black;
-    display: block;
-    text-decoration: none;
+.lg {
+    width: 100px;
+    height: 100px;
+}
+
+.gmail {
+    margin-left: 30%;
+    margin-top: 10%;
+    height: 40px;
+    width: 50px;
+}
+
+.logoGmail {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*PRESENTACION*/
+.presentacion {
+    margin-top: 15%;
+    height: 0;
+}
+
+.nombre {
+    font-size: 300%;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+/*PROYECTOS*/
+.imgCac {
+    width: 750px;
+    height: 500px;
+    filter: blur(2px);
+}
+
+.imgCal {
+    filter: blur(2px);
+    height: 500px;
+}
+
+.proyectos a {
+    width: min-content;
+    position: relative;
+    display: inline-block;
     text-align: center;
 }
 
-a:hover {
-    background-color: lightyellow;
+.proyectos a img {
+    border-radius: 20px;
+    top: -50px;
+    left: -35px;
+    display: block;
+    z-index: 999;
+    cursor: pointer;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
 }
 
-.contenido {
-    padding-left: 0px;
+.proyectos a img:hover {
+    transform: scale(1.01);
 }
 
-.active {
-    border: 2px solid black;
+.proyectos a div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    --c: #ffffff;
+    color: #0000;
+    background:
+        linear-gradient(90deg, rgb(0, 0, 0) 50%, var(--c) 0) calc(100% - var(--_p, 0%))/200% 100%,
+        linear-gradient(var(--c) 0 0) 0% 100%/var(--_p, 0%) 100% no-repeat;
+    -webkit-background-clip: text, padding-box;
+    background-clip: text, padding-box;
+    transition: 0.5s;
+    font-size: 150%;
+    font-weight: 900;
+}
+
+.proyectos a div:hover {
+    --_p: 100%;
+}
+
+/*responsive*/
+
+@media screen and (min-width:280px) and (max-width:1880px) {
+    .exterior {
+        grid-template-areas:
+            "informacion"
+            "presentacion"
+            "proyectos";
+    }
+
+    .foto {
+        height: 15rem;
+        width: 15rem;
+    }
+
+    .informacion {
+        bottom: 0;
+    }
+
+    .presentacion {
+        margin-top: 0;
+        margin-bottom: 8rem;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:280px) and (max-width:947px) {
+    .presentacion {
+        margin-bottom: 8rem;
+    }
+}
+
+@media screen and (min-width:948px) and (max-width:1880px) {
+    .presentacion {
+        margin-bottom: 6rem;
+    }
+}
+
+@media screen and (min-width:280px) and (max-width:1102px) {
+    .proyectos {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width:1102px) and (max-width:1880px) {
+    .proyectos {
+        display: flex;
+        justify-content:space-evenly;
+    }
 }
