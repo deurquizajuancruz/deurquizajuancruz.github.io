@@ -115,9 +115,9 @@ body {
     display: block;
     z-index: 999;
     cursor: pointer;
-    -webkit-transition-property: all;
-    -webkit-transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease;
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
 }
 
 .proyectos a img:hover {
@@ -145,7 +145,9 @@ body {
     --_p: 100%;
 }
 
-@media screen and (min-width:69px) and (max-width:947px) {
+/*responsive*/
+
+@media screen and (min-width:280px) and (max-width:1880px) {
     .exterior {
         grid-template-areas:
             "informacion"
@@ -169,26 +171,29 @@ body {
     }
 }
 
-@media screen and (min-width:948px) and (max-width:1880px) {
-    .exterior {
-        grid-template-areas:
-            "informacion"
-            "presentacion"
-            "proyectos";
-    }
-
-    .foto {
-        height: 15rem;
-        width: 15rem;
-    }
-
-    .informacion {
-        bottom: 0;
-    }
-
+@media screen and (min-width:280px) and (max-width:947px) {
     .presentacion {
-        margin-top: 0;
+        margin-bottom: 8rem;
+    }
+}
+
+@media screen and (min-width:948px) and (max-width:1880px) {
+    .presentacion {
         margin-bottom: 6rem;
-        text-align: center;
+    }
+}
+
+@media screen and (min-width:280px) and (max-width:1102px) {
+    .proyectos {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width:1102px) and (max-width:1880px) {
+    .proyectos {
+        display: flex;
+        justify-content:space-evenly;
     }
 }
