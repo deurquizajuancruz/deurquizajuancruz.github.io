@@ -1,7 +1,7 @@
 body {
     background: rgb(48, 30, 177);
     background: linear-gradient(180deg, rgba(48, 30, 177, 1) 0%, rgba(94, 100, 154, 1) 100%);
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway', sans-serif !important;
 }
 
 .exterior {
@@ -10,6 +10,7 @@ body {
         "informacion presentacion"
         "informacion proyectos";
     min-height: 100vh;
+    margin-top: 3%;
 }
 
 .informacion {
@@ -26,21 +27,44 @@ body {
 
 /*INFORMACION*/
 .informacion {
-    margin-top: 10%;
-    margin-left: 20%;
+    /*margin-top: 10%;
+    margin-left: 20%;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen {
+    position: relative;
+    bottom: 20%;
 }
 
 .foto {
     border-radius: 50%;
+    position: relative;
+    bottom: 20%;
+}
+
+.logos {
+    display: flex;
+    position:inherit;
+    left: 8%;
+    bottom: 27%;
+    justify-content: center;
+    align-items: center;
 }
 
 .logos ul {
-    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content:center;
 }
 
 .logos ul li {
     display: inline-block;
-    margin: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
 }
 
 .logos ul li:hover {
@@ -54,16 +78,22 @@ body {
 }
 
 .gmail {
-    margin-left: 50px;
-    margin-bottom: 30px;
+    margin-left: 30%;
+    margin-top: 10%;
     height: 40px;
     width: 50px;
+}
+
+@media screen and (min-width:68px) and (max-width:1880px) {
+    .foto {
+        width: 70%;
+        height: 40%;
+    }
 }
 
 /*PRESENTACION*/
 .presentacion {
     margin-top: 10%;
-
 }
 
 .nombre {
@@ -71,6 +101,13 @@ body {
     padding-bottom: 0%;
     margin-bottom: 0%;
     text-decoration: underline;
+    font-weight: 900;
+}
+
+@media screen and (min-width:400px) and (max-width:500px) {
+    .nombre {
+        font-size: 150%;
+    }
 }
 
 /*PROYECTOS*/
