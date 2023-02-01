@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anotador de Truco</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <h1>Anotador de truco argentino </h1>
+    <p>
+        Puntos Nosotros:
+        <label id="puntosNosotros">0</label>
+    </p>
+    <p>
+        Malas:
+        <label id="malasNosotros">0</label>
+    </p>
+    <p>
+        Buenas:
+        <label id="buenasNosotros">0</label>
+    </p>
+    <button id="sumarNosotros" onclick="sumar(1)"> + </button>
+    <button id="restarNosotros" onclick="restar(1)"> - </button>
+
+    <p>
+        Puntos Ellos:
+        <label id="puntosEllos">0</label>
+    </p>
+    <p>
+        Malas:
+        <label id="malasEllos">0</label>
+    </p>
+    <p>
+        Buenas:
+        <label id="buenasEllos">0</label>
+    </p>
+
+    <button id="sumarEllos" onclick="sumar(0)"> + </button>
+    <button id="restarEllos" onclick="restar(0)"> - </button>
+
+    <p>
+        <label id="ganador"></label>
+    </p>
+
+    <p>
+        <label id="diferencia"></label>
+    </p>
+
+    <button type="reset" onclick="reiniciar()"> Reiniciar</button>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
