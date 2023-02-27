@@ -1,4 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Milonga&display=swap');
+
 body {
     text-align: center;
-    background-image: url(/assets/370799.jpg);
+    font-family: 'Milonga', sans-serif, cursive;
+    /* background-image: url(/assets/370799.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover; */
 }
+
+.titulos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.tituloNosotros {
+    border-bottom: solid black;
+}
+
+.tituloEllos {
+    border-bottom: solid black;
+    border-left: solid black;
+}
+
+.linea {
+    border-bottom: solid black;
+    width: 400px;
+    margin: 0 auto;
+}
+
+/* .nosotros {
+    position:absolute;
+    top:50%;
+    right: 75%;
+} 
+
+.ellos {
+    position:absolute;
+    top:50%;
+    left: 75%;
+}
+
+.v-line {
+    border-left: solid #000;
+    height: 50%;
+    left: 50%;
+    position: absolute;
+} */

@@ -7,40 +7,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anotador de Truco</title>
     <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <h1>Anotador de truco argentino </h1>
-    <p>
-        Puntos Nosotros:
-        <label id="puntosNosotros">0</label>
-    </p>
-    <p>
-        Malas:
-        <label id="malasNosotros">0</label>
-    </p>
-    <p>
-        Buenas:
-        <label id="buenasNosotros">0</label>
-    </p>
-    <button id="sumarNosotros" onclick="sumar(1)"> + </button>
-    <button id="restarNosotros" onclick="restar(1)"> - </button>
 
-    <p>
-        Puntos Ellos:
-        <label id="puntosEllos">0</label>
-    </p>
-    <p>
-        Malas:
-        <label id="malasEllos">0</label>
-    </p>
-    <p>
-        Buenas:
-        <label id="buenasEllos">0</label>
-    </p>
+    <div class="titulos">
+        <h2 class="tituloNosotros"> Nosotros </h2>
+        <h2 class="tituloEllos"> Ellos </h2>
+    </div>
 
-    <button id="sumarEllos" onclick="sumar(0)"> + </button>
-    <button id="restarEllos" onclick="restar(0)"> - </button>
+    <div class="v-line">
+    </div>
+
+    <div class="nosotros">
+        <p>
+            Puntos Nosotros:
+            <label id="puntosNosotros">0</label>
+        </p>
+        <p>
+            Malas:
+            <label id="malasNosotros">0</label>
+        </p>
+        <p>
+            Buenas:
+            <label id="buenasNosotros">0</label>
+        </p>
+    </div>
+
+    <div class="linea"> </div>
+
+    
+
+    <div class="ellos">
+        <p>
+            Puntos Ellos:
+            <label id="puntosEllos">0</label>
+        </p>
+        <p>
+            Malas:
+            <label id="malasEllos">0</label>
+        </p>
+        <p>
+            Buenas:
+            <label id="buenasEllos">0</label>
+        </p>
+    </div>
+
+    <div class="buttons">
+        <button id="sumarNosotros" onclick="sumar(1)"> + </button>
+        <button id="restarNosotros" onclick="restar(1)"> - </button>
+        <button id="sumarEllos" onclick="sumar(0)"> + </button>
+        <button id="restarEllos" onclick="restar(0)"> - </button>
+        <button type="reset" onclick="reiniciar()"> Reiniciar</button>
+    </div>
 
     <p>
         <label id="ganador"></label>
@@ -49,8 +72,6 @@
     <p>
         <label id="diferencia"></label>
     </p>
-
-    <button type="reset" onclick="reiniciar()"> Reiniciar</button>
 
     <script src="./script.js"></script>
 </body>

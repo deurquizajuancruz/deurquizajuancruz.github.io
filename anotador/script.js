@@ -68,7 +68,7 @@ function ganando() {
     else if (ellos === 0 && nosotros === 0) {
         reiniciar();
     }
-    else if (ellos === nosotros) {
+    else {
         ganador.innerHTML = 'Empate';
         diferencia.innerHTML = '';
     }

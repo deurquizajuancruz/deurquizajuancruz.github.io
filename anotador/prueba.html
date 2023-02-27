@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Anotador de Truco</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+    .team {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .team-name {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .score {
+      font-size: 40px;
+      font-weight: bold;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: lightblue;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="team">
+      <div class="team-name">Nosotros</div>
+      <div class="score" id="score-us">0</div>
+      <div>
+        <button id="add-us">Sumar</button>
+        <button id="subtract-us">Restar</button>
+      </div>
+    </div>
+    <div class="team">
+      <div class="team-name">Ellos</div>
+      <div class="score" id="score-them">0</div>
+      <div>
+        <button id="add-them">Sumar</button>
+        <button id="subtract-them">Restar</button>
+      </div>
+    </div>
+  </div>
+  <script>
+    const scoreUs = document.getElementById("score-us");
+    const scoreThem = document.getElementById("score-them");
+    const addUs = document.getElementById("add-us");
+    const addThem = document.getElementById("add-them");
+    const subtractUs = document.getElementById("subtract-us");
+    const subtractThem = document.getElementById("subtract-them");
+
+    addUs.addEventListener("click", function() {
+      scoreUs.textContent = parseInt(scoreUs.textContent) + 1;
+    });
+    subtractUs.addEventListener("click", function() {
+      scoreUs.textContent = parseInt(scoreUs.textContent) - 1;
+    });
+    addThem.addEventListener("click", function() {
+      scoreThem.textContent = parseInt(scoreThem.textContent) + 1;
+    });
+    subtractThem.addEventListener("click", function() {
+      scoreThem.textContent = parseInt(scoreThem.textContent) - 1;
+    });
+  </script>
+</body>
+</html>
